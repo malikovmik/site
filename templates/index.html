@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitnesso</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/styles.css') }}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Меню -->
+
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="{{ url_for('static', filename='image/Logo.svg') }}" alt="Fitnesso Logo">
+            </a>
+        </div>
+        
+        <!-- Основное меню -->
+        <nav class="main-menu">
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="shop.html">Заказать</a></li>
+            </ul>
+        </nav>
+
+        <button class="burger-menu">&#9776;</button>
+
+    </header>
+
+    <div class="offer">
+        
+        <h1 style="font-family: 'Oswald', sans-serif;">Путь к здоровому телу начинается прямо сейчас</h1>
+        
+    </div>
+    <div class="price_tariff">
+        <h2>Наши тарифы</h2>
+    </div>
+    <!-- Блок из трех тарифов -->
+    <!-- Секция с тремя тарифами -->
+    <section class="pricing">
+        <!-- Первый тариф -->
+        <div class="tariff">
+            <img src="{{ url_for('static', filename='image/Картинка.jpeg') }}" alt="Тариф 1">
+            <h3>Стандартный тариф "Легкий старт"</h3>
+            <div class="feature">- 4 персональные онлайн-тренировки в месяц.</div>
+            <div class="feature">- Еженедельные индивидуальные планы тренировок.</div>
+            <div class="feature">- Доступ к записям тренировок для повторения.</div>
+            <div class="feature">- Онлайн-консультации по вопросам питания и здоровья.</div>
+            <div class="feature">- Поддержка по чату в рабочие часы.</div>
+            <p class="price"></p>
+            <a href="shop.html"><button class="buy-button">$19.99 в месяц</button></a>
+        </div>
+        <!-- Второй тариф -->
+        <div class="tariff">
+            <img src="{{ url_for('static', filename='image/Картинка4.jpeg') }}" alt="Тариф 2">
+            <h3>Продвинутый тариф "Фитнес Эксперт"</h3>
+            <div class="feature">- 8 персональных онлайн-тренировок в месяц.</div>
+            <div class="feature">- Индивидуальные планы тренировок и диетические рекомендации.</div>
+            <div class="feature">- Персональный мониторинг прогресса и коррекция программы тренировок.</div>
+            <div class="feature">- Доступ к эксклюзивным видеоурокам и материалам о здоровом образе жизни.</div>
+            <div class="feature">- Приоритетная поддержка по чату и электронной почте.</div>
+            <p class="price"></p>
+            <a href="shop.html"><button class="buy-button">$29.99 в месяц</button></a>
+        </div>
+        <!-- Третий тариф -->
+        <div class="tariff">
+            <img src="{{ url_for('static', filename='image/Картинка3.jpeg') }}" alt="Тариф 3">
+            <h3>тариф "Элитная форма"</h3>
+            <div class="feature">- 12 персональных онлайн-тренировок в месяц.</div>
+            <div class="feature">- Полная персонализация планов тренировок, учет особенностей здоровья и целей.</div>
+            <div class="feature">- Индивидуальное питание с регулярным анализом диеты.</div>
+            <div class="feature">- Ежедневный мониторинг активности и сна с рекомендациями.</div>
+            <div class="feature">- Персональный чат и возможность связи в любое время для срочных вопросов и поддержки.</div>
+            <p class="price"></p>
+            <a href="shop.html"><button class="buy-button">$49.99 в месяц</button></a>
+        </div>
+    </section>
+
+    <section id="feedback">
+        <h2>Оставь контакт и получи подарок - бесплатное занятие</h2>
+        <form action="#" method="post">
+            <div>            
+                <input type="text" id="name" name="name" placeholder="Имя" required>
+            </div>
+            <div>                
+                <input type="email" id="email" name="email" placeholder="Email" required>
+            </div>
+            <div>                
+                <input type="text" id="number" name="number" placeholder="Номер телефона" required>
+            </div>
+            <div>
+                <button type="submit">Получить</button>
+            </div>
+        </form>
+    </section>
+
+    <script>
+        // Функция для переключения отображения описания тарифа
+        function toggleDescription(tariff) {
+            var description = tariff.querySelector('.description');
+            description.style.display = (description.style.display === 'none' || description.style.display === '') ? 'block' : 'none';
+        }
+        // Событие, срабатывающее после загрузки страницы, бургер или основное
+        document.addEventListener('DOMContentLoaded', function () {
+            const burgerMenuButton = document.querySelector('.burger-menu');
+            const mainMenu = document.querySelector('.main-menu');
+            
+            burgerMenuButton.addEventListener('click', function () {
+                mainMenu.classList.toggle('show');
+            });
+        });
+    </script>
+
+</body>
+</html>

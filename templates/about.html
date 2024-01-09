@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitnesso</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/styles.css') }}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Меню -->
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="{{ url_for('static', filename='image/Logo.svg') }}" alt="Fitnesso Logo">
+            </a>
+        </div>
+        
+        <!-- Основное меню -->
+        <nav class="main-menu">
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="shop.html">Заказать</a></li>
+            </ul>
+        </nav>
+
+        <button class="burger-menu">&#9776;</button>
+
+    </header>
+
+
+    <!-- Содержимое страницы -->
+    <div class="content">
+        <h1>ПРИВЕТ, Я САНДРА ЛАЙОНС</h1>
+
+        <div class="trainer-photo">
+            <!-- фотография тренера -->
+            <img src="{{ url_for('static', filename='image/Картинка2.jpeg') }}" alt="Тренер Sandra Lyons">
+        </div>
+
+        <p>Добро пожаловать в мир заботы о своем здоровье и достижения желаемой формы! Мы предлагаем вам уникальную
+            возможность преобразить свою жизнь с нашими персональными тренировками, созданными специально для вас.
+
+            Наши профессиональные тренеры готовы стать вашими гидами в мире фитнеса, разработав для вас индивидуальную
+            программу тренировок, которая соответствует вашим целям и особенностям. Будь то снижение веса, укрепление
+            мышц, повышение выносливости или общее улучшение физической формы – мы здесь, чтобы помочь вам достичь
+            результатов.
+
+            Что делает наши тренировки особенными? Мы уделяем внимание каждой детали, подстраиваясь под ваш образ
+            жизни, физическую подготовку и предпочтения. Наши занятия эффективны и максимально комфортны – вы можете
+            выбирать место и время тренировок в соответствии с вашим графиком.
+
+            Присоединяйтесь к нам сегодня и начните свой путь к здоровью, энергии и уверенности в себе. Оставьте
+            заявку на консультацию, и мы с удовольствием поможем вам определить ваши цели и разработать план
+            достижения их. Вместе мы сделаем каждую тренировку увлекательной и результативной!
+
+            Не откладывайте заботу о своем теле на потом. Давайте вместе создадим вашу идеальную форму – здесь и сейчас!
+        </p>
+    </div>
+    <!-- Скрипт для бургер меню -->
+    <section id="feedback">
+        <h2>Оставь контакт и получи подарок - бесплатное занятие</h2>
+        <form action="#" method="post">
+            <div>            
+                <input type="text" id="name" name="name" placeholder="Имя" required>
+            </div>
+            <div>                
+                <input type="email" id="email" name="email" placeholder="Email" required>
+            </div>
+            <div>                
+                <input type="text" id="number" name="number" placeholder="Номер телефона" required>
+            </div>
+            <div>
+                <button type="submit">Получить</button>
+            </div>
+        </form>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const burgerMenuButton = document.querySelector('.burger-menu');
+            const mainMenu = document.querySelector('.main-menu');
+
+            burgerMenuButton.addEventListener('click', function () {
+                mainMenu.classList.toggle('show');
+            });
+        });
+    </script>
+
+</body>
+
+</html>
