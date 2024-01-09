@@ -1,0 +1,274 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #3498db;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+.main-menu {
+    display: flex;
+    align-items: center;
+}
+
+.main-menu ul {
+    list-style-type: none;
+    margin: 0;
+    display: flex;
+}
+
+.main-menu ul li {
+    margin-right: 20px;
+}
+
+.main-menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.main-menu a:hover {
+    color: #2980b9;
+}
+
+.burger-menu {
+    display: none;
+    font-size: 1.5em;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.offer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    background: url('/static/image/Картинка7.jpg') center/cover no-repeat;
+    color: #ecf0f1;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.pricing {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+.tariff {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    margin: 10px;
+    flex: 1;
+    max-width: 300px;
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.tariff:hover {
+    transform: scale(1.05);
+}
+
+.tariff img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.feature {
+    margin-bottom: 10px;
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.price {
+    font-weight: bold;
+    color: #e74c3c;
+    font-size: 1.2em;
+    margin-top: auto;
+}
+
+.price_tariff {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin: 20px 0;
+    font-weight: bold;
+    color: #e74c3c;
+    font-size: 3em;
+    margin-top: auto;
+}
+
+.price_tariff h2 {
+    margin: 0;
+}
+
+.buy-button {
+    display: inline-block;
+    background-color: #e74c3c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.buy-button:hover {
+    background-color: #c0392b;
+}
+
+#feedback {
+    background-color: #f5f5f5;
+    padding: 50px 0;
+}
+
+#feedback h2 {
+    text-align: center;
+    color: #333;
+}
+
+#feedback form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#feedback input,
+#feedback textarea,
+#feedback button {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#feedback textarea {
+    resize: vertical;
+}
+
+#feedback button {
+    background-color: #3498db;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#feedback button:hover {
+    background-color: #2980b9;
+}
+
+.content {
+    max-width: 1200px;
+    margin: 50px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.trainer-photo {
+    flex: 30%;
+    text-align: right;
+    padding-right: 20px;
+}
+
+.trainer-photo img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+p {
+    flex: 50%;
+    padding-left: 20px;
+    font-size: 1.2em;
+}
+
+/* Адаптивные стили для маленьких экранов */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    .main-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        background-color: #3498db;
+    }
+
+    .main-menu.show {
+        display: flex;
+    }
+
+    .main-menu ul {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .main-menu ul li {
+        margin: 10px 0;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+
+    .pricing {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tariff {
+        max-width: 100%;
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+    h1,
+    p,
+    .trainer-photo {
+        flex: 100%;
+        text-align: left;
+    }
+}

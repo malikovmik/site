@@ -1,0 +1,181 @@
+body {
+    font-family: 'Oswald', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(52, 152, 219, 0.8); /* Цвет фона с прозрачностью */
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000; /* Выше всех элементов */
+}
+
+.logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+.main-menu {
+    display: flex;
+}
+
+.main-menu ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+}
+
+.main-menu ul li {
+    margin-right: 20px;
+}
+
+.main-menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.main-menu a:hover {
+    color: #2980b9;
+}
+
+.burger-menu {
+    display: none;
+    font-size: 1.5em;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.background-image {
+    background: url('/static/image/Картинка2.jpeg') center/cover no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Прозрачный оверлей */
+    z-index: -1;
+}
+
+.content {
+    width: 80%;
+    margin: 0 auto;
+    z-index: 1; /* Над оверлеем */
+}
+
+.description img {
+    max-width: 100%;
+    height: auto;
+}
+
+.call-to-action {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.8); /* Прозрачный фон формы */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Тень формы */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 0.5em;
+}
+
+input,
+button {
+    width: 100%;
+    padding: 0.8em;
+    margin-bottom: 1em;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.buy-button:hover {
+    background-color: #c0392b;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    .main-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        background-color: rgba(52, 152, 219, 0.8);
+    }
+
+    .main-menu.show {
+        display: flex;
+    }
+
+    .main-menu ul {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .main-menu ul li {
+        margin: 10px 0;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+
+    .hero {
+        height: auto;
+    }
+
+    .background-image,
+    .overlay {
+        height: auto;
+    }
+
+    .content {
+        padding: 20px;
+    }
+}
